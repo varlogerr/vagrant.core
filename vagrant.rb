@@ -9,6 +9,7 @@ Vagrant.configure("2") do |config|
     box_conf = BOXES[index].deep_merge(DEFAULT_BOX)
     box_defaults = box_conf[:defaults]
     env_vars = box_conf[:env_vars]
+    provisions = box_conf[:provisions]
 
     config.vm.define box_conf[:box_name], primary: index == 0 ? true : false do |box|
       the_vm = box.vm
@@ -35,6 +36,10 @@ Vagrant.configure("2") do |config|
         vb.cpus = ENV.has_key?(env_vars[:cpus]) ? Integer(ENV[env_vars[:cpus]]) : box_defaults[:cpus]
 
         vb.customize ["modifyvm", :id, "--natdnshostresolver1", "on"]
+      end
+
+      provisions.each do |provision|
+        the_vm.provision provision[0], provision[1]
       end
     end
   end
