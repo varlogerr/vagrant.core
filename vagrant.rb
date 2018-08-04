@@ -46,7 +46,7 @@ Vagrant.configure("2") do |config|
       end
 
       provisions.each do |provision|
-        the_vm.provision provision[0], provision[1]
+        the_vm.provision *provision
       end
     end
   end
