@@ -14,11 +14,11 @@ Vagrant.configure("2") do |config|
     config.vm.define box_conf[:box_name], primary: index == 0 ? true : false do |box|
       the_vm = box.vm
 
-      # configure box image
-      image = box_conf[:image].split(":")
-      the_vm.box = image[0]
-      if image.count > 1
-        the_vm.box_version = "=#{ image[1] }"
+      # configure box
+      the_box = box_conf[:box].split(":")
+      the_vm.box = the_box[0]
+      if the_box.count > 1
+        the_vm.box_version = "=#{ the_box[1] }"
       end
       the_vm.box_check_update = false
 

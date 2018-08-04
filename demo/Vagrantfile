@@ -4,14 +4,14 @@
 vagrant_path = File.expand_path("#{ File.dirname(__FILE__) }/vagrant")
 core_path = "#{ vagrant_path }/core"
 
-load "#{ core_path }/images.rb"
+load "#{ core_path }/boxes.rb"
 
 BOXES = [
   {
     # box name should be unique per boxes set in 1 manifest
     :box_name => "box",
     :host     => "TheBox",
-    :image    => SUPPORTED_IMAGES["ubuntu18serv"],
+    :box    => BOX_ALIASES["ubuntu18serv"],
     :defaults => {
       :ip       => nil,
       :gui      => false,
