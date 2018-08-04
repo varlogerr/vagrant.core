@@ -2,6 +2,9 @@
 # vi: set ft=ruby :
 
 DEFAULT_BOX = {
+  :box_name => "box",
+  :host     => "TheBox",
+  :image    => SUPPORTED_IMAGES["ubuntu18serv"],
   :defaults => {
     :ip       => nil,
     :gui      => false,
