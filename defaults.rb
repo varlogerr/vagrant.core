@@ -14,8 +14,5 @@ DEFAULT_BOX = {
     :memory   => "MEMORY",
     :cpus     => "CPUS",
   },
-  :provisions => [
-    [:shell, :path => "vagrant/core/dummy/test.sh"],
-    [:shell, :inline => "echo 'Hello from dummy inline provisioner'"],
-  ],
+  :provisions => [],
 }
