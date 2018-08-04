@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+# export MEMORY=4096
+# export CPUS=2
+# export IP=192.168.1.100
+# export GUI=0
+vagrant $@
