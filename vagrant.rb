@@ -6,7 +6,7 @@ load File.expand_path("#{ File.dirname(__FILE__) }/defaults.rb")
 
 Vagrant.configure("2") do |config|
   BOXES.each_index do |index|
-    box_conf = BOXES[index].deep_merge(DEFAULT_BOX)
+    box_conf = DEFAULT_BOX.deep_merge(BOXES[index])
     box_defaults = box_conf[:defaults]
     env_vars = box_conf[:env_vars]
     provisions = box_conf[:provisions]
