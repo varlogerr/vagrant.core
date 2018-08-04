@@ -23,7 +23,7 @@ Vagrant.configure("2") do |config|
       the_vm.box_check_update = false
 
       # configure hostname
-      the_vm.hostname = box_conf[:box_host]
+      the_vm.hostname = box_conf[:host]
 
       # configure ip
       if box_defaults[:ip] != nil || ENV.has_key?(env_vars[:ip])
