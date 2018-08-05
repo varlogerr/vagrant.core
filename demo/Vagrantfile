@@ -25,7 +25,7 @@ BOXES = [
       :cpus     => "CPUS",
     },
     :provisions => [
-      # [:shell, :path => "vagrant/provisioner-installers/deb-ansible-install"],
+      # [:shell, :path => "vagrant/provisioner-installers/ubu16-ansible-install"],
       # [:shell, :inline => "cd /vagrant/vagrant/unibook && ansible-playbook vagrantbook.yml", :privileged => false],
     ],
   },
