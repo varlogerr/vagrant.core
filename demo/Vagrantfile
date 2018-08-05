@@ -11,7 +11,7 @@ BOXES = [
     # box name should be unique per boxes set in 1 manifest
     :box_name => "box",
     :host     => "TheBox",
-    :box    => BOX_ALIASES["ubuntu18serv"],
+    :box      => BOX_ALIASES["debian9serv"],
     :defaults => {
       :ip       => nil,
       :gui      => false,
