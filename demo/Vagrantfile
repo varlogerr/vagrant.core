@@ -26,7 +26,7 @@ BOXES = [
     },
     :provisions => [
       # [:shell, :path => "vagrant/provisioner-installers/ubu16-ansible-install"],
-      # [:shell, :inline => "cd /vagrant/vagrant/unibook && ansible-playbook vagrantbook.yml", :privileged => false],
+      # [:shell, :inline => "cd /vagrant/vagrant/unibook/vagrantbook && ansible-playbook vagrantbook.yml", :privileged => false],
     ],
   },
 ]
