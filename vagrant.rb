@@ -10,6 +10,7 @@ Vagrant.configure("2") do |config|
     box_defaults = box_conf[:defaults]
     env_vars = box_conf[:env_vars]
     provisions = box_conf[:provisions]
+    synced_folders = box_conf[:synced_folders]
 
     config.vm.define box_conf[:box_name], primary: index == 0 ? true : false do |box|
       the_vm = box.vm
@@ -47,6 +48,10 @@ Vagrant.configure("2") do |config|
 
       provisions.each do |provision|
         the_vm.provision *provision
+      end
+
+      synced_folders.each do |folder|
+        the_vm.synced_folder *folder
       end
     end
   end

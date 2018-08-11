@@ -18,4 +18,5 @@ DEFAULT_BOX = {
     :cpus     => "CPUS",
   },
   :provisions => [],
+  :synced_folders => [],
 }
