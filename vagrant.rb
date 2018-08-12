@@ -36,7 +36,7 @@ Vagrant.configure("2") do |config|
         # configure gui
         vb.gui = box_defaults[:gui]
         if ENV.has_key?(env_vars[:gui])
-          vb.gui = Integer(env_vars[:gui]) == 0 ? false : true
+          vb.gui = Integer(ENV[env_vars[:gui]]) == 0 ? false : true
         end
         # configure memory
         vb.memory = ENV.has_key?(env_vars[:memory]) ? Integer(ENV[env_vars[:memory]]) : box_defaults[:memory]
